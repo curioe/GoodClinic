@@ -1,0 +1,11 @@
+#icon-options-mobiledetector {
+	background:url("icon-setting.png") no-repeat scroll 0 0 transparent;
+}
+
+#icon-options-addmobiledetector {
+	background:url("icon-add.png") no-repeat scroll 0 0 transparent;
+}
+
+a.button {
+	line-height:26px;
+}

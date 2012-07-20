@@ -1,0 +1,1 @@
+((.*iPhone.*)|(.*iPod.*)|(.*BlackBerry.*)|(.*Android.*)|(.*webOS.*)|(.*Windows\ CE.*)|(.*Windows\ Phone.*)|(.*IEMobile.*)|(.*Opera\ Mini.*)|(.*Opera\ Mobi.*)|(.*HTC.*)|(.*LG-.*)|(.*LGE.*)|(.*SAMSUNG.*)|(.*Samsung.*)|(.*Symbian.*)|(.*Nokia.*)|(.*PlayStation.*)|(.*PLAYSTATION.*)|(.*Nintendo\ DSi.*)|(.*TMO-US_LEO.*)|(.*SEC-SGH.*))
