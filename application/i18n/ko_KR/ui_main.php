@@ -11,7 +11,7 @@
 	'add' => '추가',
 	'added_by' => 'Added By',
 	'additional_data' => '추가 데이터',
-	'additional_reports' => '추가 리포트',
+	'additional_reports' => '가까운 다른 병원들',
 	'add_edit' => '수정',
 	'add_field' => '필드추가',
 	'add_language' => '언어추가',
