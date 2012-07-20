@@ -249,7 +249,6 @@
 				content += "<a href=\""+event.feature.attributes.ci_media_link+"\" rel=\"lightbox-group1\" title=\""+event.feature.attributes.ci_msg+"\">";
 				content += "<img src=\""+event.feature.attributes.ci_media_medium+"\" /><br/>";
 			}
-
 			content += event.feature.attributes.ci_msg+"</div><div style=\"clear:both;\"></div>";
 			content += "\n<div class=\"infowindow_meta\">";
 			content += "<a href='javascript:zoomToSelectedFeature("+ lon + ","+ lat +",1)'><?php echo Kohana::lang('ui_main.zoom_in');?></a>";

@@ -30,6 +30,8 @@ Author Email: caleb@ushahidi.com
   div#mainmenu a.active { background-color:#d25e4f; }
 
 
+.infowindow_meta { font-size : 15px }
+
 
 /* general styles */
 h1 {

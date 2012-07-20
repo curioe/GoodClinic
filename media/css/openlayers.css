@@ -1,6 +1,7 @@
 .infowindow{
 	margin:20px 0 0 0;
 	position:relative;
+	line-height: 230%;
 	padding:0;
 }
 .infowindow .infowindow_content{
@@ -43,11 +44,12 @@
 	text-decoration:underline;
 }
 .infowindow .infowindow_meta{
-	font-size:90%;
+	font-size:120%;
 	clear:both;
 }
 .infowindow_meta a, .infowindow_meta a:visited{
 	color:#000;
+	
 }
 
 div.olMap {
