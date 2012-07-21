@@ -181,16 +181,18 @@
 	        "<div class=\"infowindow_list\">"+event.feature.attributes.name+"</div>\n" +
 	        "<div class=\"infowindow_meta\">";
 
+	    
+	    content += event.feature.attributes.desc+"<br><br>";
+    
 	    if ( typeof(event.feature.attributes.link) != 'undefined' &&
 	      event.feature.attributes.link != '')
 	    {
 	      content += "<a class='btn' href='"+event.feature.attributes.link+"'>" +
-	          "<?php echo Kohana::lang('ui_main.more_information');?></a><br/><br/>";
+	          "<?php echo Kohana::lang('ui_main.more_information');?></a>&nbsp;|&nbsp;";
 	    }
-    
 	    content += "<a class='btn' href='javascript:zoomToSelectedFeature("+ lon + ","+ lat +",1)'>";
 	    content += "<?php echo Kohana::lang('ui_main.zoom_in');?></a>";
-	    content += "&nbsp;&nbsp;|&nbsp;&nbsp;";
+	  //  content += "&nbsp;|&nbsp;";
 	    content += "<a class='btn' href='javascript:zoomToSelectedFeature("+ lon + ","+ lat +",-1)'>";
 	    content += "<?php echo Kohana::lang('ui_main.zoom_out');?></a></div>";
 	    content += "</div><div style=\"clear:both;\"></div></div>";		

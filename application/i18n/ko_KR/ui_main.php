@@ -287,7 +287,7 @@
 	'modify_date' => '날짜 수정',
 	'month' => '달',
 	'more' => 'More',
-	'more_information' => '[ 병원 추가 정보 보기 ]',
+	'more_information' => '추가 정보 보기',
 	'multi_country_instance' => 'Does this Ushahidi Deployment Span Multiple Countries',
 	'must_confirm_email_address' => 'You must confirm your email address to access this deployment. If you lost your confirmation email, you can request a new one below.',
 	'name' => '이름',

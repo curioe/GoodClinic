@@ -293,7 +293,7 @@ class Reports_Controller extends Admin_Controller {
 	public function save_custom_temp() {
 		$this->template->content = new View('admin/reports_test');
 		$a = array('key' => 'value');
-		$this->template->content->incident = $_GET['id'];
+		$this->template->content->incident = 'key';
 		if ( $_POST ) {
 			$lon = $_POST['longitude'];
 			$lat = $_POST['latitude'];

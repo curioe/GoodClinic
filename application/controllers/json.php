@@ -112,17 +112,46 @@ class Json_Controller extends Template_Controller
 			$link = url::base()."reports/view/".$marker->incident_id;
 			$item_name = $this->_get_title($marker->incident_title, $link);
 
+
 			$json_item = array();
 			$json_item['type'] = 'Feature';
+			
+			$db = new Database();
+			$rows = $db->query('SELECT * FROM form_response WHERE form_field_id=1 and incident_id='.$marker->incident_id);				
+			$incident_ids = '';
+			
+			$formfieldvalue = "0";
+			foreach ($rows as $row)
+			{
+				$formfieldvalue = $row->form_response;
+				
+			} 
+			
+			if ($formfieldvalue != "0")
+                $numicon = '/media/img/glass_numbers_'.substr($formfieldvalue,0,1).'.png';
+            else
+                $numicon = $icon;
+            
+            
+            $rows = $db->query('SELECT * FROM incident WHERE id='.$marker->incident_id);				
+            foreach ($rows as $row)
+            {
+                $alldesc = nl2br($row->incident_description);
+            }
+            
+            
+            
 			$json_item['properties'] = array(
 				'id' => $marker->incident_id,
 				'name' => $item_name,
 				'link' => $link,
 				'category' => array($category_id),
 				'color' => $color,
-				'icon' => $icon,
+				'icon' => $numicon,
 				'thumb' => $thumb,
-				'timestamp' => strtotime($marker->incident_date)
+				'timestamp' => strtotime($marker->incident_date),
+				'formresponse' => $formfieldvalue,
+				'desc' => $alldesc
 			);
 			$json_item['geometry'] = array(
 				'type' => 'Point',

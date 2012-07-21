@@ -595,6 +595,9 @@ class reports_Core {
 		// Reset the paramters
 		self::$params = array();
 		
+		
+		//array_push(self::$params,'testtest','testtest');
+		
 		// Initialize the category id
 		$category_id = 0;
 		

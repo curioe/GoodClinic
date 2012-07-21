@@ -44,7 +44,7 @@
 		
 		var baseUrl = "<?php echo url::site(); ?>";
 		var longitude = <?php echo $longitude; ?>;
-		var latitude = <?php echo $latitude; ?>;
+		var latitude = <?php echo $latitude; ?>;		
 		var defaultZoom = <?php echo $default_zoom; ?>;
 		var markerRadius = <?php echo $marker_radius; ?>;
 		var markerOpacity = "<?php echo $marker_opacity; ?>";
@@ -55,8 +55,10 @@
 		var dailyGraphData = "";
 		var gMediaType = 0
 		var timeout = 1500;
-		
+
 		var activeZoom = null;
+
+
 
 		var gMarkerOptions = {
 			baseUrl: baseUrl, longitude: longitude,
@@ -115,6 +117,7 @@
 			{
 				$("#OpenLayers\\.Control\\.LoadingPanel_4").show();
 			}
+				
 		}
 
 		/**
@@ -122,6 +125,7 @@
 		 */
 		function onMapEndLoad(event)
 		{
+		    
 			if ($("#loader"))
 			{
 				$("#loader").hide();
@@ -131,6 +135,7 @@
 			{
 				$("#OpenLayers\\.Control\\.LoadingPanel_4").hide();
 			}
+			
 		}
 
 		// Refactor Clusters On Zoom
@@ -596,6 +601,17 @@
 				
 			gMap = map;
 			
+					navigator.geolocation.getCurrentPosition( 
+    	 function(position) {               
+    	   longitude = position.coords.longitude;
+    	   latitude = position.coords.latitude;
+    	   
+//    	   map.setCenter(new OpenLayers.LonLat(longitude,latitude).transform(new OpenLayers.Projection("EPSG:4326"),map.getProjectionObject(),12));
+//            map.setCenter(new OpenLayers.LonLat(longitude, latitude), 5);
+    	   
+    	} );
+		
+			
 			// Category Switch Action
 			$("a[id^='cat_']").click(function()
 			{
@@ -853,6 +869,7 @@
 			smartColumns();
 		});
 		
+
 		
 		<?php
 		// START CHECKINS!

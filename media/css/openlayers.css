@@ -1,7 +1,7 @@
 .infowindow{
 	margin:20px 0 0 0;
 	position:relative;
-	line-height: 230%;
+	line-height: 180%;
 	padding:0;
 }
 .infowindow .infowindow_content{
@@ -44,7 +44,7 @@
 	text-decoration:underline;
 }
 .infowindow .infowindow_meta{
-	font-size:120%;
+	font-size:90%;
 	clear:both;
 }
 .infowindow_meta a, .infowindow_meta a:visited{
